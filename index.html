@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página con Título</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página con Título</title>
 
-        .content {
-            padding: 20px;
-        }
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-        h1 {
-            text-align: center;
-        }
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-        }
-    </style>
+    .content {
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .full-screen-image {
+      width: 100%;
+      max-height: 100vh;
+      object-fit: cover;
+    }
+
+    @media (max-width: 576px) {
+      .full-screen-image {
+        max-height: 120vh; /* Aumenta la altura en dispositivos pequeños */
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="content">
-            <h1 class="display 5">Tools for learn foreign language_Fredy A P.</h1>
-            <img src="mental.jpg" alt="Mapa Mental">
-        </div>
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="display-5 text-center">Tools for Learning Foreign Languages</h1>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+        <img src="mental.jpg" alt="Mapa Mental" class="full-screen-image" width="100">
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
